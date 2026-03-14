@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin - TalentSphere</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">TalentSphere</div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="jobs.html">Jobs</a>
+      <a href="apply.html">Apply</a>
+      <a href="admin.html">Admin</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <h1>Admin Portal</h1>
+    <p>Enter password to access the admin panel.</p>
+  </section>
+
+  <main>
+    <div id="loginForm" class="apply-form">
+      <label>
+        Password
+        <input id="adminPass" type="password" placeholder="Enter admin password" required />
+      </label>
+      <button onclick="checkAdmin()">Login</button>
+    </div>
+
+    <div id="adminPanel" style="display: none;">
+      <h2>Add New Job</h2>
+      <form class="apply-form" onsubmit="event.preventDefault(); addJob();">
+        <label>
+          Job Title
+          <input id="jobTitle" type="text" placeholder="e.g., Frontend Developer" required />
+        </label>
+        <label>
+          Location
+          <input id="jobLocation" type="text" placeholder="e.g., Hyderabad" required />
+        </label>
+        <label>
+          Job Type
+          <input id="jobType" type="text" placeholder="e.g., Full Time" required />
+        </label>
+        <button type="submit">Add Job</button>
+      </form>
+
+      <div style="text-align:center; margin-top: 20px;">
+        <a class="btn" href="jobs.html">View Jobs</a>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

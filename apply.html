@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apply - TalentSphere</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">TalentSphere</div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="jobs.html">Jobs</a>
+      <a href="apply.html">Apply</a>
+      <a href="admin.html">Admin</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <h1>Apply for a Job</h1>
+    <p>Fill out the form below to submit your application.</p>
+  </section>
+
+  <main>
+    <form class="apply-form" onsubmit="submitApplication(event)">
+      <label>
+        Full Name
+        <input type="text" id="name" placeholder="Your full name" required />
+      </label>
+      <label>
+        Email
+        <input type="email" id="email" placeholder="you@example.com" required />
+      </label>
+      <label>
+        Phone Number
+        <input type="text" id="phone" placeholder="+91 123 456 7890" required />
+      </label>
+      <label>
+        Position Applying For
+        <input type="text" id="position" placeholder="e.g., Frontend Developer" required />
+      </label>
+      <button type="submit">Submit Application</button>
+    </form>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Admin Panel - TalentSphere</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+<div class="logo">TalentSphere Admin</div>
+
+<div class="nav-links">
+<a href="index.html">Home</a>
+<a href="jobs.html">Jobs</a>
+</div>
+</nav>
+
+<div class="apply-form">
+
+<h2>Admin Login</h2>
+
+<input type="password" id="adminPass" placeholder="Enter Admin Password" required>
+<br><br>
+
+<button onclick="checkAdmin()">Login</button>
+
+</div>
+
+
+<div id="adminPanel" style="display:none;" class="apply-form">
+
+<h2>Add Job</h2>
+
+<input type="text" id="jobTitle" placeholder="Job Title" required>
+<br><br>
+
+<input type="text" id="jobLocation" placeholder="Location" required>
+<br><br>
+
+<input type="text" id="jobType" placeholder="Job Type" required>
+<br><br>
+
+<button onclick="addJob()">Add Job</button>
+
+</div>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
