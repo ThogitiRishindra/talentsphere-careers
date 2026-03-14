@@ -186,8 +186,16 @@
   text-align: center;
 }
 
-#jobCount {
-  font-weight: bold;
+.job-card button {
+  margin: 5px;
+  padding: 5px 10px;
+  background: #f44336;
   color: white;
-  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.job-card button:hover {
+  background: #d32f2f;
 }

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Applications - TalentSphere</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+<div class="logo">TalentSphere Admin</div>
+
+<div class="nav-links">
+<a href="index.html">Home</a>
+<a href="admin.html">Admin</a>
+<a href="jobs.html">Jobs</a>
+</div>
+</nav>
+
+<section class="hero">
+<h1>Job Applications</h1>
+<p>All submitted applications</p>
+</section>
+
+<div class="job-container" id="applicationsList"></div>
+
+<script>
+
+let apps = JSON.parse(localStorage.getItem("applications")) || [];
+
+let container = document.getElementById("applicationsList");
+
+if(apps.length === 0){
+container.innerHTML = "<h3 style='color:white;text-align:center;'>No Applications Yet</h3>";
+}
+
+apps.forEach(function(app){
+
+let div = document.createElement("div");
+
+div.classList.add("job-card");
+
+  div.innerHTML = `
+    <h3>${app.name}</h3>
+    <p>Email: ${app.email}</p>
+    <p>Phone: ${app.phone}</p>
+    <p>Position: ${app.position}</p>
+    ${app.resume ? `<p>Resume: <a href="${app.resume}" target="_blank">Download</a></p>` : ''}
+  `;
+
+container.appendChild(div);
+
+});
+
+</script>
+
+</body>
+</html>

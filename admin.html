@@ -8,12 +8,11 @@
 </head>
 <body>
   <nav class="navbar">
-    <div class="logo">TalentSphere</div>
+    <div class="logo">TalentSphere Admin</div>
     <div class="nav-links">
       <a href="index.html">Home</a>
       <a href="jobs.html">Jobs</a>
       <a href="apply.html">Apply</a>
-      <a href="admin.html">Admin</a>
     </div>
   </nav>
 
@@ -31,9 +30,9 @@
       <button onclick="checkAdmin()">Login</button>
     </div>
 
-    <div id="adminPanel" style="display: none;">
+    <div id="adminPanel" style="display: none;" class="apply-form">
       <h2>Add New Job</h2>
-      <form class="apply-form" onsubmit="event.preventDefault(); addJob();">
+      <form onsubmit="event.preventDefault(); addJob();">
         <label>
           Job Title
           <input id="jobTitle" type="text" placeholder="e.g., Frontend Developer" required />
@@ -51,6 +50,8 @@
 
       <div style="text-align:center; margin-top: 20px;">
         <a class="btn" href="jobs.html">View Jobs</a>
+        <br><br>
+        <a class="btn" href="applications.html">View Applications</a>
       </div>
     </div>
   </main>
